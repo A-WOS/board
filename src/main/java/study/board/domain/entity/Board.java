@@ -38,12 +38,24 @@ public class Board {
     @LastModifiedDate
     private LocalDateTime modifiedDate;
 
+    @Column(nullable = true)
+    private String origFilename;
+
+    @Column(nullable = true)
+    private String filename;
+
+    @Column(nullable = true)
+    private String filePath;
+
     @Builder
-    public Board(Long id, String author, String title, String content) {
+    public Board(Long id, String author, String title, String content, String origFilename, String filename, String filepath) {
         this.id = id;
         this.author = author;
         this.title = title;
         this.content = content;
+        this.origFilename = origFilename;
+        this.filename = filename;
+        this.filePath = filepath;
     }
 
 

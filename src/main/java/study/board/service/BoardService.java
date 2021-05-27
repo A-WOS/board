@@ -34,6 +34,9 @@ public class BoardService {
                     .title(board.getTitle())
                     .content(board.getContent())
                     .createdDate(board.getCreatedDate())
+                    .origFilename(board.getOrigFilename())
+                    .filepath(board.getFilePath())
+                    .filename(board.getFilename())
                     .build();
             boardDtoList.add(boardDto);
         }
@@ -50,6 +53,9 @@ public class BoardService {
                 .title(board.getTitle())
                 .content(board.getContent())
                 .createdDate(board.getCreatedDate())
+                .origFilename(board.getOrigFilename())
+                .filename(board.getFilename())
+                .filepath(board.getFilePath())
                 .build();
         return boardDto;
     }
