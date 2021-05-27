@@ -26,9 +26,14 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     //    runtimeOnly 'mysql:mysql-connector-java'
     implementation 'org.mariadb.jdbc:mariadb-java-client:2.7.3'
+    implementation 'org.springframework.boot:spring-boot-devtools:2.4.4'
 
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation ('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+    runtimeOnly 'org.webjars:bootstrap:4.5.3'
 }
 
 test {
