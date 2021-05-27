@@ -1,5 +1,12 @@
 package study.board.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.InputStreamResource;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.ResourceLoader;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -8,10 +15,18 @@ import study.board.dto.BoardDto;
 import study.board.service.BoardService;
 import study.board.util.MD5Generator;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
 @Controller
 public class BoardController {
+
+    @Autowired
+    ResourceLoader resourceLoader;
+
     private BoardService boardService;
 
     public BoardController(BoardService boardService) {
@@ -100,5 +115,17 @@ public class BoardController {
     public String delete(@PathVariable("id") Long id) {
         boardService.deletePost(id);
         return "redirect:/";
+    }
+
+    @GetMapping("/download/{id}")
+    public ResponseEntity<Resource> fileDownload(@PathVariable("id") Long id) throws IOException {
+//        FileDto fileDto = fileService.getFile(fileId);
+        BoardDto boardDto = boardService.getPost(id);
+        Path path = Paths.get(boardDto.getFilepath());
+        Resource resource = new InputStreamResource(Files.newInputStream(path));
+        return ResponseEntity.ok()
+                .contentType(MediaType.parseMediaType("application/octet-stream"))
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + boardDto.getOrigFilename() + "\"")
+                .body(resource);
     }
 }
