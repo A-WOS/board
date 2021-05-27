@@ -6,8 +6,8 @@ plugins {
 
 group = 'study'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
-//sourceCompatibility = '13'
+sourceCompatibility = '13'
+//sourceCompatibility = '1.8'
 
 configurations {
     compileOnly {
