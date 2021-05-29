@@ -12,7 +12,7 @@ Spring Boot, Thymeleaf
 mysql -u root -p    
     
 MariaDB[(none)]> create database example; -- example라는 데이터베이스를 생성합니다.    
-MariaDB[(none)]> create user 'user'@'%' identified by 'UserPassword'; -- user라는 사용자를 생성합니다.    
+MariaDB[(none)]> create user 'user'@'%' identified by '1234'; -- user라는 사용자를 생성하고 비밀번호는 '1234'로 합니다. 개인적으로 1234인지 '1234'인지는 잘 기억이안나는데 한번해보시길...    
 MariaDB[(none)]> grant all on example.* to 'user'@'%'; -- user 사용자에게 example 데이터베이스의 모든 권한을 줍니다.    
 MariaDB[(none)]> show databases; -- 현재 데이터베이스들을 볼 수 있습니다.    
     
@@ -26,9 +26,12 @@ server.port={포트는 기본적으로 8080}
 spring.jpa.hibernate.ddl-auto=update    
 spring.datasource.driver-class-name=org.mariadb.jdbc.Driver    
 spring.datasource.url=jdbc:mariadb://localhost:3307/{자신이 만든 데이터베이스}?serverTimezone=Asia/Seoul&characterEncoding=UTF-8    
+// 위의 MariaDB계정 설정 부분에서 데이터베이스 이름은 example로 했기 때문에 아시죠?     
 spring.datasource.username={자신이 설정한 username}    
-spring.datasource.password={자신이 설정한 비밀번호}    
-
+// 위의 MariaDB계정 설정 부분에서 username은 user로 했기 때문에 아시죠?     
+spring.datasource.password={자신이 설정한 비밀번호}     
+// 위의 MariaDB계정 설정 부분에서 password는 1234로 했기 때문에 아시죠?     
+    
 # 개발환경 설정
 build.gradle 파일에     
     
