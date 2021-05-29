@@ -4,10 +4,11 @@
     
 
 # 개발환경 
-intelliJ ultimate    
-MySQL -> MariaDB (학교 전공에서 MariaDB를 쓰게되었는데 왠지 모르게 오류나서 MySQL에서 MariaDB로 변경)    
-Spring Boot, Thymeleaf    
-
+IDEA : intelliJ ultimate    
+DB : MySQL -> MariaDB (학교 전공에서 MariaDB를 쓰게되었는데 왠지 모르게 오류나서 MySQL에서 MariaDB로 변경)        
+Framework : Spring Boot    
+Template Engine : Thymeleaf    
+    
 # MariaDB 계정 설정 및 권한 부여
 mysql -u root -p    
     
