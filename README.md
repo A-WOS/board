@@ -11,9 +11,9 @@ Spring Boot, Thymeleaf
 # MariaDB 계정 설정 및 권한 부여
 mysql -u root -p    
     
-MariaDB[(none)]> create database example; -- example라는 데이터베이스를 생성합니다.    
-MariaDB[(none)]> create user 'user'@'%' identified by '1234'; -- user라는 사용자를 생성하고 비밀번호는 '1234'로 합니다. 개인적으로 1234인지 '1234'인지는 잘 기억이안나는데 한번해보시길...    
-MariaDB[(none)]> grant all on example.* to 'user'@'%'; -- user 사용자에게 example 데이터베이스의 모든 권한을 줍니다.    
+MariaDB[(none)]> create database example; // example라는 데이터베이스를 생성합니다.    
+MariaDB[(none)]> create user 'user'@'%' identified by '1234'; // user라는 사용자를 생성하고 비밀번호는 '1234'로 합니다. 개인적으로 1234인지 '1234'인지는 잘 기억이안나는데 한번해보시길...    
+MariaDB[(none)]> grant all on example.* to 'user'@'%'; // user 사용자에게 example 데이터베이스의 모든 권한을 줍니다.    
 MariaDB[(none)]> show databases; -- 현재 데이터베이스들을 볼 수 있습니다.    
     
 IntelliJ에서 DB연동을 하고 @Entity를 붙여주게 되면 모델을 만들어주기 때문에 직접적으로 DB에서 쿼리를 작성하지 않아도 됩니다. - JPA를 검색하십시요    
