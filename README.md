@@ -4,6 +4,7 @@
     
 
 # 개발환경 
+    
 IDEA : intelliJ ultimate    
 DB : MySQL -> MariaDB (학교 전공에서 MariaDB를 쓰게되었는데 왠지 모르게 오류나서 MySQL에서 MariaDB로 변경)        
 Framework : Spring Boot    
@@ -37,6 +38,7 @@ application.properties 파일에
     // 위의 MariaDB계정 설정 부분에서 password는 1234로 했기 때문에 아시죠?     
     
 # 개발환경 설정
+    
 build.gradle 파일에     
     
 sourceCompatibility = '1.8' // 개인적으로 각자 환경이 13인 경우도 있었기 때문에 그건 자기가 쓰는 자바 jdk 버전에 맞춰서..    
@@ -57,10 +59,13 @@ sourceCompatibility = '1.8' // 개인적으로 각자 환경이 13인 경우도 
     runtimeOnly 'org.webjars:bootstrap:4.5.3'    
  
 # 편의 설정
+    
 devtools에 대해서 검색하면 뭐하는앤지 나옴    
-IntelliJ에는 기능을 많이 제공하기 때문에 cmd에서 mariadb로 들어가지 않고 우측 상단에 database라는 탭이 있음    
-그것을 이용하면 좀 더 편리함(하지만 우리는 cmd로 열어서 함)    
- ------------------------------------------------------------------------------------------------------------------------    
+IntelliJ에는 기능을 많이 제공하기 때문에 cmd에서 mariadb로 들어가지 않고 우측 상단에 database라는 탭이 있음  
+그것을 이용하면 좀 더 편리함
+    
+
+------------------------------------------------------------------------------------------------------------------------    
 # board.id, file.id의 index가 점핑되는 최악의 버그 발생
 
 board entity, file entity를 join column을 안해줘서 그런지 오류가 발생하여    
