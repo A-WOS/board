@@ -23,7 +23,7 @@ build.gradle 파일에
     
 sourceCompatibility = '1.8' // 개인적으로 각자 환경이 13인 경우도 있었기 때문에 그건 자기가 쓰는 자바 jdk 버전에 맞춰서..    
     
-implementation 'org.springframework.boot:spring-boot-starter-data-jpa'    
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'    
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'    
     implementation 'org.springframework.boot:spring-boot-starter-web'    
     compileOnly 'org.projectlombok:lombok'    
@@ -37,4 +37,4 @@ implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'    
     }    
     runtimeOnly 'org.webjars:bootstrap:4.5.3'    
-}    
+ 
