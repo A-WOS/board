@@ -5,7 +5,7 @@
 
 # 개발환경 
     
-IDEA : intelliJ ultimate 없을시 community 버전이 있으니 참조.. https://noobnim.tistory.com/19
+IDEA : intelliJ ultimate 없을시 community 버전이 있으니 참조.. https://noobnim.tistory.com/19    
 DB : MySQL -> MariaDB (학교 전공에서 MariaDB를 쓰게되었는데 왠지 모르게 오류나서 MySQL에서 MariaDB로 변경)        
 Framework : Spring Boot    
 Template Engine : Thymeleaf    
